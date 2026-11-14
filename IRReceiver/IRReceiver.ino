@@ -35,10 +35,10 @@ constexpr Color WHITE = {255, 255, 255};
 enum Command : byte {
   BRIGHTER = 0x00, DIMMER = 0x01, POWER_OFF = 0x02, POWER_ON = 0x03,
   COLOR_RED = 0x04, COLOR_GREEN = 0x05, COLOR_BLUE = 0x06, COLOR_WHITE = 0x07,
-  COLOR_RED_ORANGE = 0x08, COLOR_LIME = 0x09, COLOR_LIGHT_BLUE = 0x0A, EFFECT_FLASH = 0x0B,
-  COLOR_ORANGE_RED = 0x0C, COLOR_TURQUOISE = 0x0D, COLOR_VIOLET = 0x0E, EFFECT_STROBE = 0x0F,
-  COLOR_ORANGE = 0x10, COLOR_CYAN = 0x11, COLOR_MAGENTA = 0x12, EFFECT_FADE = 0x13,
-  COLOR_YELLOW = 0x14, COLOR_SKY_BLUE = 0x15, COLOR_PINK = 0x16, EFFECT_SMOOTH = 0x17
+  COLOR_HUE_015 = 0x08, COLOR_HUE_135 = 0x09, COLOR_HUE_255 = 0x0A, EFFECT_FLASH = 0x0B,
+  COLOR_HUE_030 = 0x0C, COLOR_HUE_150 = 0x0D, COLOR_HUE_270 = 0x0E, EFFECT_STROBE = 0x0F,
+  COLOR_HUE_045 = 0x10, COLOR_HUE_165 = 0x11, COLOR_HUE_285 = 0x12, EFFECT_FADE = 0x13,
+  COLOR_HUE_060 = 0x14, COLOR_HUE_180 = 0x15, COLOR_HUE_300 = 0x16, EFFECT_SMOOTH = 0x17
 };
 
 struct ColorButton {
@@ -46,24 +46,25 @@ struct ColorButton {
   Color color;
 };
 
-// RGB values approximate the colors printed on the remote.
+// Each column advances in 15-degree hue steps: red to yellow, green to cyan,
+// blue to magenta. HSL saturation=100%, lightness=50%. See remote.svg.
 const ColorButton COLOR_BUTTONS[] = {
-  {COLOR_RED, RED},
-  {COLOR_GREEN, GREEN},
-  {COLOR_BLUE, BLUE},
-  {COLOR_WHITE, WHITE},
-  {COLOR_RED_ORANGE, {255, 32, 0}},
-  {COLOR_LIME, {64, 255, 0}},
-  {COLOR_LIGHT_BLUE, {0, 96, 255}},
-  {COLOR_ORANGE_RED, {255, 64, 0}},
-  {COLOR_TURQUOISE, {0, 255, 128}},
-  {COLOR_VIOLET, {128, 0, 255}},
-  {COLOR_ORANGE, {255, 128, 0}},
-  {COLOR_CYAN, {0, 255, 255}},
-  {COLOR_MAGENTA, {255, 0, 255}},
-  {COLOR_YELLOW, {255, 255, 0}},
-  {COLOR_SKY_BLUE, {0, 128, 255}},
-  {COLOR_PINK, {255, 0, 128}}
+  {COLOR_RED, RED},  // Red, hue 0 degrees
+  {COLOR_GREEN, GREEN},  // Green, hue 120 degrees
+  {COLOR_BLUE, BLUE},  // Blue, hue 240 degrees
+  {COLOR_WHITE, WHITE},  // White
+  {COLOR_HUE_015, {255, 64, 0}},  // Red-orange, hue 15 degrees
+  {COLOR_HUE_135, {0, 255, 64}},  // Green-spring, hue 135 degrees
+  {COLOR_HUE_255, {64, 0, 255}},  // Blue-violet, hue 255 degrees
+  {COLOR_HUE_030, {255, 128, 0}},  // Orange, hue 30 degrees
+  {COLOR_HUE_150, {0, 255, 128}},  // Spring green, hue 150 degrees
+  {COLOR_HUE_270, {127, 0, 255}},  // Violet, hue 270 degrees
+  {COLOR_HUE_045, {255, 191, 0}},  // Amber, hue 45 degrees
+  {COLOR_HUE_165, {0, 255, 191}},  // Turquoise, hue 165 degrees
+  {COLOR_HUE_285, {191, 0, 255}},  // Purple, hue 285 degrees
+  {COLOR_HUE_060, {255, 255, 0}},  // Yellow, hue 60 degrees
+  {COLOR_HUE_180, {0, 255, 255}},  // Cyan, hue 180 degrees
+  {COLOR_HUE_300, {255, 0, 255}},  // Magenta, hue 300 degrees
 };
 
 // FLASH and FADE use seven colors; SMOOTH transitions between R, G, and B.

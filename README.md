@@ -85,12 +85,42 @@ arranged in the same rows and columns as the remote.
 |---|---|---|---|
 | `00` Brighter | `01` Dimmer | `02` OFF | `03` ON |
 | `04` Red | `05` Green | `06` Blue | `07` White |
-| `08` Red-orange | `09` Lime | `0A` Light blue | `0B` FLASH |
-| `0C` Orange-red | `0D` Turquoise | `0E` Violet | `0F` STROBE |
-| `10` Orange | `11` Cyan | `12` Magenta | `13` FADE |
-| `14` Yellow | `15` Sky blue | `16` Pink | `17` SMOOTH |
+| `08` Red-orange | `09` Green-spring | `0A` Blue-violet | `0B` FLASH |
+| `0C` Orange | `0D` Spring green | `0E` Violet | `0F` STROBE |
+| `10` Amber | `11` Turquoise | `12` Purple | `13` FADE |
+| `14` Yellow | `15` Cyan | `16` Magenta | `17` SMOOTH |
 
-RGB presets approximate the printed button colors.
+### Palette
+
+Each color column advances in **15° hue steps**, from a primary color to its
+adjacent secondary color. White has a separate button.
+
+- Red column: red (0°) → yellow (60°).
+- Green column: green (120°) → cyan (180°).
+- Blue column: blue (240°) → magenta (300°).
+
+All hues use HSL saturation 100% and lightness 50%, following the
+[W3C HSL definition](https://www.w3.org/TR/css-color/#the-hsl-notation).
+Equal hue spacing does not imply equal perceived brightness.
+
+| Command | Color | Hue | RGB |
+|---|---|---|---|
+| `04` | Red | 0° | `255, 0, 0` |
+| `08` | Red-orange | 15° | `255, 64, 0` |
+| `0C` | Orange | 30° | `255, 128, 0` |
+| `10` | Amber | 45° | `255, 191, 0` |
+| `14` | Yellow | 60° | `255, 255, 0` |
+| `05` | Green | 120° | `0, 255, 0` |
+| `09` | Green-spring | 135° | `0, 255, 64` |
+| `0D` | Spring green | 150° | `0, 255, 128` |
+| `11` | Turquoise | 165° | `0, 255, 191` |
+| `15` | Cyan | 180° | `0, 255, 255` |
+| `06` | Blue | 240° | `0, 0, 255` |
+| `0A` | Blue-violet | 255° | `64, 0, 255` |
+| `0E` | Violet | 270° | `127, 0, 255` |
+| `12` | Purple | 285° | `191, 0, 255` |
+| `16` | Magenta | 300° | `255, 0, 255` |
+| `07` | White | — | `255, 255, 255` |
 
 ### Controls
 
