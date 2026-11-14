@@ -5,6 +5,7 @@ Arduino Uno sketches with a shared Makefile for uploading and serial monitoring.
 | Sketch | Description |
 |---|---|
 | [IRReceiver](IRReceiver/IRReceiver.ino) | Control an RGB LED with a 24-button IR remote: 16 colors, brightness, power, and four effects |
+| [IRReceiverAlternative](IRReceiverAlternative/IRReceiverAlternative.ino) | Same controls with gamma 2.8 and green output limited to 64/255 PWM |
 
 ## IRReceiver hardware
 
@@ -102,6 +103,7 @@ adjacent secondary color. White has a separate button.
 All hues use HSL saturation 100% and lightness 50%, following the
 [W3C HSL definition](https://www.w3.org/TR/css-color/#the-hsl-notation).
 Equal hue spacing does not imply equal perceived brightness.
+The original sketch applies overall brightness directly to the palette values.
 
 | Command | Color | Hue | RGB |
 |---|---|---|---|
@@ -142,7 +144,26 @@ Equal hue spacing does not imply equal perceived brightness.
 The seven-color sequence is red, yellow, green, cyan, blue, magenta, and white.
 Effects run without blocking remote input.
 
+## Alternative sketch
+
+`IRReceiverAlternative` is a separate copy with the same wiring, buttons, palette,
+and effects. Its output applies gamma correction (exponent 2.8), followed by
+channel balance and brightness scaling. Green PWM is limited to 64/255.
+
+```bash
+make run SKETCH=IRReceiverAlternative
+```
+
+[Alternative remote diagram](remote-alternative.svg). Diagram swatches and palette
+values describe logical colors before output correction.
+
+Gamma follows [Adafruit's LED correction approach](https://learn.adafruit.com/led-tricks-gamma-correction/the-longer-fix).
+Gamma 2.8 is an experimental starting value. The green limit is a visual balance
+estimate for this LED. Adjustments to this version are independent of `IRReceiver`.
+
 ## Code
 
 [IRReceiver/IRReceiver.ino](IRReceiver/IRReceiver.ino) contains the pin assignments,
 command map, RGB presets, and effect timings as named constants and tables.
+[IRReceiverAlternative/IRReceiverAlternative.ino](IRReceiverAlternative/IRReceiverAlternative.ino)
+contains the independent experimental version.
