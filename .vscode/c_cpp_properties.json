@@ -1,0 +1,27 @@
+{
+  "version": 4,
+  "configurations": [
+    {
+      "name": "Arduino Uno",
+      "compilerPath": "${env:HOME}/.arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-g++",
+      "compilerArgs": ["-mmcu=atmega328p"],
+      "cppStandard": "gnu++11",
+      "cStandard": "gnu11",
+      "includePath": [
+        "${workspaceFolder}/IRReceiver",
+        "${env:HOME}/Arduino/libraries/IRremote/src",
+        "${env:HOME}/.arduino15/packages/arduino/hardware/avr/1.8.8/cores/arduino",
+        "${env:HOME}/.arduino15/packages/arduino/hardware/avr/1.8.8/variants/standard"
+      ],
+      "defines": [
+        "F_CPU=16000000L",
+        "ARDUINO=10607",
+        "ARDUINO_AVR_UNO",
+        "ARDUINO_ARCH_AVR"
+      ],
+      "forcedInclude": [
+        "${env:HOME}/.arduino15/packages/arduino/hardware/avr/1.8.8/cores/arduino/Arduino.h"
+      ]
+    }
+  ]
+}

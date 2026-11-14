@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-labelledby="title description">
+<title id="title">24-button RGB remote layout</title>
+<desc id="description">Six rows of four buttons matching the remote photograph. Each button shows its action and NEC command. Command codes are hexadecimal.</desc>
+<rect width="640" height="900" fill="#f1f5f9"/>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<text x="320" y="38" font-size="24" fill="#0f172a">RGB remote · NEC 0xEF00</text>
+<text x="320" y="66" font-size="15" fill="#475569">24 buttons · hexadecimal command codes</text>
+<rect x="24" y="88" width="592" height="740" rx="32" fill="#d1d5db" stroke="#475569" stroke-width="3"/>
+<circle cx="104" cy="153" r="49" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+<text x="104" y="158" font-size="13" font-weight="bold" fill="#0f172a">BRIGHT +</text>
+<text x="104" y="225" font-size="16" fill="#0f172a">0x00</text>
+<circle cx="248" cy="153" r="49" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+<text x="248" y="158" font-size="13" font-weight="bold" fill="#0f172a">BRIGHT −</text>
+<text x="248" y="225" font-size="16" fill="#0f172a">0x01</text>
+<circle cx="392" cy="153" r="49" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+<text x="392" y="158" font-size="22" font-weight="bold" fill="#ffffff">OFF</text>
+<text x="392" y="225" font-size="16" fill="#0f172a">0x02</text>
+<circle cx="536" cy="153" r="49" fill="#dc2626" stroke="#64748b" stroke-width="2"/>
+<text x="536" y="158" font-size="22" font-weight="bold" fill="#ffffff">ON</text>
+<text x="536" y="225" font-size="16" fill="#0f172a">0x03</text>
+<circle cx="104" cy="275" r="49" fill="#ff0000" stroke="#64748b" stroke-width="2"/>
+<text x="104" y="280" font-size="22" font-weight="bold" fill="#ffffff">R</text>
+<text x="104" y="347" font-size="16" fill="#0f172a">0x04</text>
+<circle cx="248" cy="275" r="49" fill="#00ff00" stroke="#64748b" stroke-width="2"/>
+<text x="248" y="280" font-size="22" font-weight="bold" fill="#0f172a">G</text>
+<text x="248" y="347" font-size="16" fill="#0f172a">0x05</text>
+<circle cx="392" cy="275" r="49" fill="#0000ff" stroke="#64748b" stroke-width="2"/>
+<text x="392" y="280" font-size="22" font-weight="bold" fill="#ffffff">B</text>
+<text x="392" y="347" font-size="16" fill="#0f172a">0x06</text>
+<circle cx="536" cy="275" r="49" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+<text x="536" y="280" font-size="22" font-weight="bold" fill="#0f172a">W</text>
+<text x="536" y="347" font-size="16" fill="#0f172a">0x07</text>
+<circle cx="104" cy="397" r="49" fill="#ff2000" stroke="#64748b" stroke-width="2"/>
+<text x="104" y="402" font-size="13" font-weight="bold" fill="#ffffff">RED-ORANGE</text>
+<text x="104" y="469" font-size="16" fill="#0f172a">0x08</text>
+<circle cx="248" cy="397" r="49" fill="#40ff00" stroke="#64748b" stroke-width="2"/>
+<text x="248" y="402" font-size="22" font-weight="bold" fill="#0f172a">LIME</text>
+<text x="248" y="469" font-size="16" fill="#0f172a">0x09</text>
+<circle cx="392" cy="397" r="49" fill="#0060ff" stroke="#64748b" stroke-width="2"/>
+<text x="392" y="402" font-size="13" font-weight="bold" fill="#ffffff">LIGHT BLUE</text>
+<text x="392" y="469" font-size="16" fill="#0f172a">0x0A</text>
+<circle cx="536" cy="397" r="49" fill="#475569" stroke="#64748b" stroke-width="2"/>
+<text x="536" y="402" font-size="22" font-weight="bold" fill="#ffffff">FLASH</text>
+<text x="536" y="469" font-size="16" fill="#0f172a">0x0B</text>
+<circle cx="104" cy="519" r="49" fill="#ff4000" stroke="#64748b" stroke-width="2"/>
+<text x="104" y="524" font-size="13" font-weight="bold" fill="#ffffff">ORANGE-RED</text>
+<text x="104" y="591" font-size="16" fill="#0f172a">0x0C</text>
+<circle cx="248" cy="519" r="49" fill="#00ff80" stroke="#64748b" stroke-width="2"/>
+<text x="248" y="524" font-size="13" font-weight="bold" fill="#0f172a">TURQUOISE</text>
+<text x="248" y="591" font-size="16" fill="#0f172a">0x0D</text>
+<circle cx="392" cy="519" r="49" fill="#8000ff" stroke="#64748b" stroke-width="2"/>
+<text x="392" y="524" font-size="13" font-weight="bold" fill="#ffffff">VIOLET</text>
+<text x="392" y="591" font-size="16" fill="#0f172a">0x0E</text>
+<circle cx="536" cy="519" r="49" fill="#475569" stroke="#64748b" stroke-width="2"/>
+<text x="536" y="524" font-size="13" font-weight="bold" fill="#ffffff">STROBE</text>
+<text x="536" y="591" font-size="16" fill="#0f172a">0x0F</text>
+<circle cx="104" cy="641" r="49" fill="#ff8000" stroke="#64748b" stroke-width="2"/>
+<text x="104" y="646" font-size="13" font-weight="bold" fill="#0f172a">ORANGE</text>
+<text x="104" y="713" font-size="16" fill="#0f172a">0x10</text>
+<circle cx="248" cy="641" r="49" fill="#00ffff" stroke="#64748b" stroke-width="2"/>
+<text x="248" y="646" font-size="22" font-weight="bold" fill="#0f172a">CYAN</text>
+<text x="248" y="713" font-size="16" fill="#0f172a">0x11</text>
+<circle cx="392" cy="641" r="49" fill="#ff00ff" stroke="#64748b" stroke-width="2"/>
+<text x="392" y="646" font-size="13" font-weight="bold" fill="#ffffff">MAGENTA</text>
+<text x="392" y="713" font-size="16" fill="#0f172a">0x12</text>
+<circle cx="536" cy="641" r="49" fill="#475569" stroke="#64748b" stroke-width="2"/>
+<text x="536" y="646" font-size="22" font-weight="bold" fill="#ffffff">FADE</text>
+<text x="536" y="713" font-size="16" fill="#0f172a">0x13</text>
+<circle cx="104" cy="763" r="49" fill="#ffff00" stroke="#64748b" stroke-width="2"/>
+<text x="104" y="768" font-size="13" font-weight="bold" fill="#0f172a">YELLOW</text>
+<text x="104" y="835" font-size="16" fill="#0f172a">0x14</text>
+<circle cx="248" cy="763" r="49" fill="#0080ff" stroke="#64748b" stroke-width="2"/>
+<text x="248" y="768" font-size="13" font-weight="bold" fill="#ffffff">SKY BLUE</text>
+<text x="248" y="835" font-size="16" fill="#0f172a">0x15</text>
+<circle cx="392" cy="763" r="49" fill="#ff0080" stroke="#64748b" stroke-width="2"/>
+<text x="392" y="768" font-size="22" font-weight="bold" fill="#ffffff">PINK</text>
+<text x="392" y="835" font-size="16" fill="#0f172a">0x16</text>
+<circle cx="536" cy="763" r="49" fill="#475569" stroke="#64748b" stroke-width="2"/>
+<text x="536" y="768" font-size="13" font-weight="bold" fill="#ffffff">SMOOTH</text>
+<text x="536" y="835" font-size="16" fill="#0f172a">0x17</text>
+</g></svg>
