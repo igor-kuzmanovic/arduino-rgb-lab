@@ -1,4 +1,4 @@
-# Arduino Sketches
+# Arduino RGB Lab
 
 Arduino Uno sketches with a shared Makefile for uploading and serial monitoring.
 
